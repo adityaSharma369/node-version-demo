@@ -16,7 +16,7 @@ LABEL "com.github.actions.description"="Automated version bump for npm packages.
 # Here are all of the available icons: https://feathericons.com/
 LABEL "com.github.actions.icon"="chevron-up"
 # And all of the available colors: https://developer.github.com/actions/creating-github-actions/creating-a-docker-container/#label
-LABEL "com.github.actions.color"="blue"
+LABEL "com.github.actions.color"="red"
 
 # Copy the package.json and package-lock.json
 COPY package*.json ./
