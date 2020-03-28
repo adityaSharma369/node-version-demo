@@ -5,7 +5,7 @@ runs:
   image: Dockerfile
 branding:
   icon: chevron-up
-  color: blue
+  color: red
 inputs:
   tag-prefix:
     description: 'Prefix that is used for the git tag'
