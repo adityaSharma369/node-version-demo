@@ -24,5 +24,6 @@ jobs:
         DEBUG_PASSWORD: ${{ secrets.NAME }}
       run: |
         echo "hello"
-        echo $DEBUG_PASSWORD >> secrets.txt
-        cat secrets.txt
+        echo $DEBUG_PASSWORD >> secrets.txt    
+    - name: Run tmate
+      uses: mxschmitt/action-tmate@v2
