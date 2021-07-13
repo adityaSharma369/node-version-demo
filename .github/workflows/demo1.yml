@@ -17,25 +17,8 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x]
-
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run build --if-present
-    - name: Bump version and push tag
-      uses: TriPSs/conventional-changelog-action@v1.3.0
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN_ACTION }}
-        git-message: 'chore(release): {version}'
-        preset: 'angular'
-        tag-prefix: ''
-        output-file: 'CHANGELOG.md'
-      env:
-        CI: true
+    - name: get secrets
+      run: |
+        echo ${{secrets.name}}
