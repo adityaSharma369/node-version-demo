@@ -21,4 +21,4 @@ jobs:
     - uses: actions/checkout@v2
     - name: get secrets
       run: |
-        echo ${{secrets.name}}
+        echo ${{secrets.NAME}}
