@@ -22,7 +22,6 @@ jobs:
     - name: Set up secret file
       env:
         DEBUG_PASSWORD: ${{ secrets.NAME }}
-    - name: get secrets
       run: |
         echo "hello"
         echo $DEBUG_PASSWORD >> secrets.txt
